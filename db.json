@@ -1,0 +1,30 @@
+{
+  "artists": [
+    {
+      "id": "05fG473iIaoy82BF1aGhL8",
+      "name": "Slipknot",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb575ff7654f087a7e667230a4",
+      "songs": [
+        [
+          {
+            "songName": "Dead Memories",
+            "songUri": "spotify:track:0HAr4QR1xI8nwC7VfzYidu"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "3RNrq3jvMZxD9ZyoOZbQOD",
+      "name": "Korn",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb29af2ffb6f4ddd6324f878bc",
+      "songs": [
+        []
+      ]
+    },
+    {
+      "id": "3HVdAiMNjYrQIKlOGxoGh5",
+      "name": "Rob Zombie",
+      "image": "https://i.scdn.co/image/ab6761610000e5eb40a6cfc37fa94d54d28aca22"
+    }
+  ]
+}

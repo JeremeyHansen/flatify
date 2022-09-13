@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.contain {
+  width: 100%;
+  min-width: 750px;
+}
+
+.left {
+  background-color: rgb(162, 162, 162);
+  width: 20%;
+  min-width: 250px;
+  min-height: 300px;
+  float: left;
+}
+
+.right {
+  background-color: #1cb954;
+  width: 80%;
+  min-height: 500px;
+  float: right;
+
+}
+

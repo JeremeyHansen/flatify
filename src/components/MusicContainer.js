@@ -1,11 +1,9 @@
 import MusicCard from './MusicCard';
+import React, { useState } from 'react';
 
 
-function MusicContainer({ artist, token }){
-    // console.log(artist)
-    // if(artist.images.length > 0){
-    //     console.log(artist.images[0].url)
-    // }
+function MusicContainer({ artist, token, sendTracks }){
+    const [tracks, setTracks] = useState([]);
 
 
     function handleClick() {
@@ -37,22 +35,24 @@ function MusicContainer({ artist, token }){
       }
 
     function handleSongs() {
-        fetch(`https://api.spotify.com/v1/search?q=${artist.name}&type=track`, {
+        fetch(`https://api.spotify.com/v1/search?q=${artist.name}&type=track&limit=50`, {
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`,
           },
         })
           .then(res => res.json())
-          .then(data => console.log(data))
+          .then(data => sendTracks(data.tracks.items));
     }
+
+
 
 
     return (
     <div>
         <ul onClick={handleClick}>
            <h1>{artist.name}</h1>
-           <img src={artist.images.length > 0 ? artist.images[0].url : null} />
+           <img height="180" src={artist.images.length > 0 ? artist.images[0].url : null} />
         </ul>
         <button onClick={handleAlbums}>Get Albums</button>
         <button onClick={handleSongs}>Get Songs</button>
